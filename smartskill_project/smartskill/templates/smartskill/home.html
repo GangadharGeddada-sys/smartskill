@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmartSkill - Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to SmartSkill</h1>
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <label for="skill">Enter your interest:</label>
+        <input type="text" name="skill" id="skill" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
